@@ -13,17 +13,50 @@ header {
 nav {
     display: flex;
     padding: 16px;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 10px;
+    gap: 20px;
     font-size: 20px;
 }
 
+li.nav-link {
+    transition: border-bottom 0.5s ease-in 0.5s;
+}
+
+li.nav-link:hover {
+    padding: 5px;
+    border-bottom: 2px solid white;
+}
+
+.intro {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 40px;
+}
+
+.intro-desc {
+    max-width: 40%;
+}
+
+
+/*Images  styling */
+
 .logo-img {
     width: 200px;
+}
+
+.intro-img {
+    max-width: 40%;
+    min-width: 300px;
+    border: 5px animated white;
+    border-radius: 30px;
 }
