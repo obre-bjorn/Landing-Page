@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -47,12 +48,15 @@ ol,
     color: maroon;
     font-size: 16px;
     font-weight: 900;
+    transition: border,border-radius,padding,ease-in-out 0.3s ;
 }
 
 .sign-up:hover {
     background-color: maroon;
     color: white;
-    border: 1px solid white;
+    border: 3px solid white;
+    padding: 15px;
+    border-radius: 10px;
 }
 
 
@@ -63,11 +67,20 @@ header {
     color: white;
     padding: 0px 30px;
     height: 800px;
+    position: relative;
+    
 }
-
+#navbar{
+    position: fixed;
+    width: 100%;
+    background-color: maroon;
+    left: 0;
+    margin: 0px;
+}
 nav {
+    
     display: flex;
-    padding: 16px;
+    padding: 16px; 
     justify-content: space-around;
     align-items: center;
 }
@@ -80,12 +93,18 @@ nav {
 }
 
 .nav-link {
-    transition: border-bottom 0.5s, ease-in 0.3s;
+    transition: border-bottom, font-size, ease-in-out 0.3s;
 }
 
 .nav-link:hover {
+    border-bottom: 2px solid white; 
+    font-size: 25px;
     padding: 5px;
-    border-bottom: 2px solid white;
+    
+}
+.nav-icon{
+    color: white;
+    text-decoration: none;
 }
 
 .intro {
@@ -96,10 +115,12 @@ nav {
     justify-content: space-around;
     gap: 10px;
     padding: 40px;
+    padding-top: 200px;
     height: 80%;
 }
 
 .intro-desc {
+    
     max-width: 40%;
 }
 
@@ -164,14 +185,14 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 100px;
     text-align: center;
     background-color: maroon;
     color: white;
     padding: 50px;
-    border-radius: 50px;
+    
     gap: 20px;
 }
 
@@ -204,7 +225,8 @@ li {
     width: 80%;
     margin: 0 auto;
     margin-top: 100px;
-    background-color: lightgoldenrodyellow;
+    color:maroon
+    /* background-color: lightgoldenrodyellow; */
 }
 
 #contact>.heading {
@@ -217,20 +239,24 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
+    /* background-color: aqua; */
     /* height: 300px; */
     width: 100%;
+    gap: 20px;
 }
 
 .contact-card>.contact-logo {
-    background-color: bisque;
+    background-color: maroon;
+    padding: 80px;
+    border-radius: 50%;
     width: 100%;
 }
 
 .contact-card>.contact-logo img {
     display: block;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     margin: 0 auto;
+    
 }
 
 .contact-card>.contacts {
@@ -238,13 +264,21 @@ li {
     display: flex;
     flex-direction: column;
     gap: 100px;
-    background-color: beige;
+    /* background-color: beige; */
     width: 100%;
+    align-items: center;
 }
 
 .contact-card>.contacts .cont-icon {
-    width: 50%px;
+    width: 50%;
     font-size: 30px;
     color: maroon;
     text-decoration: none;
+    
+}
+.contact-card>.contacts .cont-icon  :hover{
+    
+}
+.icon{
+    margin-right: 10px;
 }
